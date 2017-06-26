@@ -718,12 +718,12 @@ var i,
 
 	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
-	funescape = function( _, escaped, escapedWhitespace ) {
+	funescape = function( _, escaped, escapedwhitespace ) {
 		var high = "0x" + escaped - 0x10000;
 		// NaN means non-codepoint
 		// Support: Firefox<24
 		// Workaround erroneous numeric interpretation of +"0x"
-		return high !== high || escapedWhitespace ?
+		return high !== high || escapedwhitespace ?
 			escaped :
 			high < 0 ?
 				// BMP codepoint
@@ -4433,7 +4433,7 @@ var rtagName = ( /<([\w:-]+)/ );
 
 var rscriptType = ( /^$|\/(?:java|ecma)script/i );
 
-var rleadingWhitespace = ( /^\s+/ );
+var rleadingwhitespace = ( /^\s+/ );
 
 var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|" +
 		"details|dialog|figcaption|figure|footer|header|hgroup|main|" +
@@ -4465,7 +4465,7 @@ function createSafeFragment( document ) {
 	div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
 
 	// IE strips leading whitespace when .innerHTML is used
-	support.leadingWhitespace = div.firstChild.nodeType === 3;
+	support.leadingwhitespace = div.firstChild.nodeType === 3;
 
 	// Make sure that tbody elements aren't automatically inserted
 	// IE will insert them into empty tables
@@ -4637,8 +4637,8 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 				}
 
 				// Manually add leading whitespace removed by IE
-				if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
-					nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[ 0 ] ) );
+				if ( !support.leadingwhitespace && rleadingwhitespace.test( elem ) ) {
+					nodes.push( context.createTextNode( rleadingwhitespace.exec( elem )[ 0 ] ) );
 				}
 
 				// Remove IE's autoinserted <tbody> from table fragments
@@ -6349,7 +6349,7 @@ jQuery.fn.extend( {
 			// See if we can take a shortcut and just use innerHTML
 			if ( typeof value === "string" && !rnoInnerhtml.test( value ) &&
 				( support.htmlSerialize || !rnoshimcache.test( value )  ) &&
-				( support.leadingWhitespace || !rleadingWhitespace.test( value ) ) &&
+				( support.leadingwhitespace || !rleadingwhitespace.test( value ) ) &&
 				!wrapMap[ ( rtagName.exec( value ) || [ "", "" ] )[ 1 ].toLowerCase() ] ) {
 
 				value = jQuery.htmlPrefilter( value );
