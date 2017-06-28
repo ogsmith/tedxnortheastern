@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TedxNortheasternU</title>
+    <title>TEDxNortheasternU</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,12 +37,24 @@
 
 <body id="page-top">
 
-
             <!-- Collect the nav links, forms, and other content for toggling -->
     <header>
       <div class = "custom-nav">
         <img src = "tedxnortheasternlogo.png"></img>
       </div>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./applicationform.html">Apply</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 
         <div class="header-content">
             <div class="header-content-inner">
@@ -54,19 +66,22 @@
                 <h1 class="customHeader"><i>Wait, But Why?</i></h1>
                 <br>
                 <br>
-                <h3> Website coming soon</h3>
-                <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a> -->
+                <a href="./about.html" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
     </header>
 
-    <!-- <section class="bg-primary" id="about">
+    <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Help us host Northeastern's very own TedX event</h2>
                     <hr class="light">
-                    <p class="text-faded">Did this catch your interest? We need your help to get this event running! Fill out the form below to get started in bringing this well known event to campus.</p>
+                    <p class="text-faded">TEDxNortheasternU is an event designed to foster an environment of Ideas Worth Spreading. The event will include a dynamic lineup of speakers from the Northeastern University and Boston Community. The Northeastern University community are invited to be a part of an inspiring day filled with new ideas, perspectives and possibilities. To stay up to date on all TEDxNortheasternU opportunities join, our email list.
+                    </p>
+                    <p class="text-faded">
+                    TEDxNortheasternU is designed to foster Ideas Worth Spreading. The event will include a dynamic lineup of speakers from Northeastern University and the wider Boston community. You are invited to be part of an inspiring day full of new ideas, perspectives, and possibilities. Join our email list to stay updated on all TEDxNortheasternU opportunities.
+                    </p>
                     <a href="./applicationform.html" class="btn btn-primary btn-xl page-scroll">Apply Now!</a>
 
                 </div>
@@ -89,11 +104,16 @@
 
                     <form method="POST" action="http://formspree.io/tedxneu@gmail.com">
                       <input type="email" name="email" placeholder="Your email" style="color:black">
-                      <button type="submit">Send</button>
+                      <button class = "submit-button" type="submit">Send</button>
                     </form>
-        </div>
-    </aside> -->
 
+        </div>
+        <div class = "social">
+          <a href="https://www.facebook.com/TEDxNortheasternU/"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/tedxneu"><i class="fa fa-twitter"></i></a>
+        </div>
+
+    </aside>
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
