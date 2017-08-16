@@ -66,6 +66,14 @@ section {
   background: #222222;
   text-shadow: none; }
 
+.nav-link-custom {
+  color: black;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-right: .5rem;
+  padding-left: .5rem; }
+
 img::selection {
   color: white;
   background: transparent; }
